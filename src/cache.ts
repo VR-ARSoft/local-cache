@@ -224,7 +224,7 @@ export async function saveCache(paths: string[], key: string): Promise<number> {
     // Ensure cache dir exists
     await fs.promises.mkdir(cacheDir, { recursive: true });
 
-    const cmd = `tar -I pigz -cf ${cachePath} -C ${baseDir} ${folderName}`;
+    const cmd = `tar -cf ${cachePath} -C ${baseDir} ${folderName}`;
 
     core.info(`Save cache: ${cacheName}`);
 
