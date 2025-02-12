@@ -174,7 +174,7 @@ export async function restoreCache(
     // Restore files from archive
     const cachePath = join(cacheDir, cacheFile.path);
     const baseDir = dirname(path);
-    const cmd = `tar -I pigz -xf ${cachePath} -C ${baseDir}`;
+    const cmd = `tar -xf ${cachePath} -C ${baseDir}`;
 
     core.info(
         [
