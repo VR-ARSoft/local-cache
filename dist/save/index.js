@@ -53528,7 +53528,7 @@ function saveCache(paths, key) {
         const folderName = (0, path_1.basename)(path);
         // Ensure cache dir exists
         yield fs_1.default.promises.mkdir(cacheDir, { recursive: true });
-        const cmd = `tar -cf ${cachePath} -C ${baseDir} ${folderName}`;
+        const cmd = `tar -cf "${cachePath}" -C "${baseDir}" "${folderName}"`;
         core.info(`Save cache: ${cacheName}`);
         const createCacheDirPromise = execAsync(cmd);
         try {
