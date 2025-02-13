@@ -53485,7 +53485,7 @@ function restoreCache(paths, primaryKey, restoreKeys) {
         // Restore files from archive
         const cachePath = (0, path_1.join)(cacheDir, cacheFile.path);
         const baseDir = (0, path_1.dirname)(path);
-        const cmd = `tar -xf ${cachePath} -C ${baseDir}`;
+        const cmd = `tar -xf "${cachePath}" -C "${baseDir}"`;
         core.info([
             `Restoring cache: ${cacheFile.name}`,
             `Created: ${(_a = cacheFile.stats) === null || _a === void 0 ? void 0 : _a.mtime}`,
